@@ -1,0 +1,30 @@
+{
+  "name": "dcs-kneeboards",
+  "version": "0.0.1",
+  "description": "DudeOfAwesome's DCS Kneeboards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dudeofawesome/dcs-kneeboards.git"
+  },
+  "keywords": [
+    "dcs",
+    "kneeboard",
+    "digital",
+    "combat",
+    "simulator"
+  ],
+  "author": "Louis Orleans <louis@orleans.io>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dudeofawesome/dcs-kneeboards/issues"
+  },
+  "homepage": "https://github.com/dudeofawesome/dcs-kneeboards#readme",
+  "dependencies": {
+    "@react-pdf/renderer": "^2.1.1",
+    "dcs-kneeboard-generator": "file:../dcs-kneeboard-generator"
+  }
+}

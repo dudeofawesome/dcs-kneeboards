@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: var(--page-width);
+  height: var(--page-height);
+
+  overflow: hidden;
+}
+
+.sections {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 2.5rem;
+  bottom: 0;
+}

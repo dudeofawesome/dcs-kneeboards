@@ -1,0 +1,47 @@
+@import '../styles/functions';
+@import '../styles/variables';
+
+.header {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.kneeboard_name {
+  width: fit-content;
+  padding: 0.25rem 0.5rem 0.25rem 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+}
+
+.subject_object_name {
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 40%);
+}
+
+.key {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.key_color {
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  border: solid hsl(0, 0%, 0%) 1px;
+  border-width: 0 0 1px 1px;
+}

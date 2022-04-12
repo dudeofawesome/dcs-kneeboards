@@ -1,0 +1,158 @@
+{
+  "$ref": "#/definitions/Kneeboard",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Key": {
+      "additionalProperties": false,
+      "description": "A list of color and/or symbols used in the kneeboard.",
+      "properties": {
+        "colors": {
+          "additionalProperties": {
+            "$ref": "#/definitions/KeyColor"
+          },
+          "description": "A list of colors that indicate things.",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "KeyColor": {
+      "additionalProperties": false,
+      "description": "A color that indicates something",
+      "properties": {
+        "color": {
+          "description": "The color used",
+          "type": "string"
+        },
+        "name": {
+          "description": "What the color indicates",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "color"
+      ],
+      "type": "object"
+    },
+    "Kneeboard": {
+      "additionalProperties": false,
+      "description": "A Kneeboard definition",
+      "properties": {
+        "description": {
+          "description": "Description of what this kneeboard contains.",
+          "type": "string"
+        },
+        "key": {
+          "$ref": "#/definitions/Key",
+          "description": "A list of color and/or symbols used in the kneeboard."
+        },
+        "name": {
+          "description": "The name of the kneeboard.",
+          "type": "string"
+        },
+        "sections": {
+          "description": "Sections of the kneeboard.",
+          "items": {
+            "$ref": "#/definitions/Section"
+          },
+          "type": "array"
+        },
+        "slug": {
+          "description": "The name of the kneeboard, written in a URI-safe way.",
+          "type": "string"
+        },
+        "subject_object": {
+          "additionalProperties": false,
+          "description": "The subject object of the kneeboard.",
+          "properties": {
+            "name": {
+              "description": "The name of the subject.",
+              "type": "string"
+            },
+            "slug": {
+              "description": "The name of the subject, written in a URI-safe way.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "slug"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "slug",
+        "subject_object",
+        "sections"
+      ],
+      "type": "object"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "description": "A section of the kneeboard",
+      "properties": {
+        "description": {
+          "description": "A further description of the section.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the subject.",
+          "type": "string"
+        },
+        "steps": {
+          "description": "The steps for this section.",
+          "items": {
+            "$ref": "#/definitions/Step"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "steps"
+      ],
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "description": "A step of a section",
+      "properties": {
+        "color_key": {
+          "description": "The name of the color key, as defined in Kneeboard::key::colors",
+          "type": "string"
+        },
+        "control_location": {
+          "description": "The physical location of the control. *",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the step. If talking about a specific item it can be a good idea to use the name as labeled. *",
+          "type": "string"
+        },
+        "state": {
+          "description": "The desired setting for the control. *",
+          "type": "string"
+        },
+        "substep": {
+          "description": "A further description of the step. Sometimes useful if there's a change to watch for after the action. *",
+          "type": "string"
+        },
+        "substep_location": {
+          "description": "The physical location of the sub-step's control. *",
+          "type": "string"
+        },
+        "substep_state": {
+          "description": "The desired state for the sub-step. *",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    }
+  }
+}

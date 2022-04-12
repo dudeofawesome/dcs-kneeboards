@@ -1,0 +1,55 @@
+.header,
+.steps {
+  --step-num-width: 1.4rem;
+}
+
+.section {
+  width: 50%;
+  border-right: solid hsl(0, 0%, 0%) 1px;
+}
+
+.header {
+  width: fit-content;
+  padding: 0.25rem 0.5rem 0.25rem calc(var(--step-num-width) + 0.2rem);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+}
+
+.steps {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  padding-right: 0.1rem;
+
+  tr {
+    td,
+    td * {
+      white-space: nowrap;
+      overflow-x: visible;
+    }
+
+    td:nth-of-type(1) {
+      width: var(--step-num-width);
+      text-align: end;
+    }
+    td:nth-of-type(2) {
+      width: 50%;
+    }
+    td:nth-of-type(3) {
+      width: 25%;
+    }
+    td:nth-of-type(4) {
+      position: relative;
+      width: calc(25% - var(--step-num-width));
+      text-align: end;
+
+      > * {
+        position: absolute;
+        top: 0;
+        right: 0.2rem;
+      }
+    }
+  }
+}

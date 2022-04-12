@@ -1,0 +1,10 @@
+$page-width: 825px;
+$page-height: 1200px;
+
+@mixin css-vars() {
+  --color-text: hsl(0, 0%, 0%);
+  --color-background: hsl(0, 0%, 100%);
+
+  --page-width: #{$page-width};
+  --page-height: #{$page-height};
+}

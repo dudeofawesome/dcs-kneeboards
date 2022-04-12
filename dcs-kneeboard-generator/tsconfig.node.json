@@ -1,0 +1,41 @@
+// {
+//   "compilerOptions": {
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "noEmit": true,
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//   },
+// }
+
+{
+  "display": "Node 16",
+  "compilerOptions": {
+    "target": "es2021",
+    "lib": ["dom", "dom.iterable", "es2021"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    // "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "importsNotUsedAsValues": "error",
+    "checkJs": true,
+    "jsx": "react",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "scripts/**/*.ts", "scripts/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
