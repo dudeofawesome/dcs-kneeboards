@@ -6,7 +6,5 @@ try {
   console.log(_);
   yaml = JSON.parse(process.env.kneeboard ?? '');
 }
-console.log('YAML AS FOLLOWS:');
-console.log(yaml);
 
 export const data: Kneeboard = yaml;
